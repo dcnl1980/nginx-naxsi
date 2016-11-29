@@ -79,9 +79,9 @@ python nx_util.py -c nx_util.conf -l /var/log/nginx/* -o
 This should output something like the below. Copy this into your custom rule file (e.g /etc/nginx/ga_naxsi.rules) and comment out learning mode from LearningMode; to #LearningMode;.
 
 ########### Optimized Rules Suggestion ##################
-# total_count:1 (50.0%), peer_count:1 (100.0%) | parenthesis, probable sql/xss
+total_count:1 (50.0%), peer_count:1 (100.0%) | parenthesis, probable sql/xss
 BasicRule wl:1010 "mz:$URL:/|$ARGS_VAR:firstname";
-# total_count:1 (50.0%), peer_count:1 (100.0%) | ; in stuff
+total_count:1 (50.0%), peer_count:1 (100.0%) | ; in stuff
 BasicRule wl:1008 "mz:$URL:/|$ARGS_VAR:firstname";
 
 To enable the changes, restart Nginx
